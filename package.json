@@ -18,15 +18,23 @@
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.2",
+    "@types/wordpress__block-editor": "^11.5.13",
     "@wordpress/scripts": "^23.3.0",
     "browser-sync": "^2.27.10",
     "npm-run-all": "^4.1.5",
-    "tailwindcss": "^3.1.4"
+    "tailwindcss": "^3.1.4",
+    "ts-loader": "^9.5.1"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.22",
+    "@types/wordpress__blocks": "^12.5.13",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.4.3"
   }
 }

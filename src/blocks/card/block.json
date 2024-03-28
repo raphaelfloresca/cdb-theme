@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "creatordb/card",
+  "version": "0.1.0",
+  "title": "Card",
+  "category": "theme",
+  "description": "Card component powered by shadcn/ui.",
+  "textdomain": "card",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "attributes": {}
+}

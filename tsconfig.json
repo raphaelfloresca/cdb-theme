@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
     // React compatibility
     "jsx": "react-jsx",
     // We want ESM supported in the output, because WebPack is going to bundle this anyways,

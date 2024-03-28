@@ -6,13 +6,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const DependencyExtractionWebpackPlugin = require('@wordpress/dependency-extraction-webpack-plugin');
 
 module.exports = {
+  ...wpConfig,
   entry: getEntryPoints(path.resolve(__dirname, 'src')),
 
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './')
     },
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".php", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   module: {
     rules: [
@@ -103,4 +104,3 @@ function getEntryPoints(directory) {
     return filePath.split(path.sep).join('/');
   }
 }
-
