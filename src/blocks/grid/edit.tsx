@@ -1,4 +1,3 @@
-import { Card } from "@/src/components/ui/card"
 import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor'
 
 export default function Edit() {
@@ -6,10 +5,10 @@ export default function Edit() {
     className?: string;
   };
 
-  const blockProps: BlockProps = useBlockProps({ className: 'm-1 p-6 border rounded-lg shadow flex-1 p-4' })
+  const blockProps: BlockProps = useBlockProps({ className: 'grid grid-cols-4 gap-4' })
   const innerBlocksProps = useInnerBlocksProps(blockProps)
 
   return (
-    <Card {...innerBlocksProps} />
+    <div {...innerBlocksProps} />
   );
 }

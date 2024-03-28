@@ -4188,7 +4188,7 @@ var __assign = (undefined && undefined.__assign) || function () {
 
 
 function Edit() {
-    var blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({ className: 'm-1 p-6 border rounded-lg shadow flex-1' });
+    var blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({ className: 'm-1 p-6 border rounded-lg shadow flex-1 p-4' });
     var innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useInnerBlocksProps)(blockProps);
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_card__WEBPACK_IMPORTED_MODULE_1__.Card, __assign({}, innerBlocksProps)));
 }

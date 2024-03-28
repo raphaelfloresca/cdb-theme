@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "creatordb/grid",
+  "version": "0.1.0",
+  "title": "Grid",
+  "category": "theme",
+  "description": "Grid component.",
+  "textdomain": "grid",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "attributes": {}
+}
