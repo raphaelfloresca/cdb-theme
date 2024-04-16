@@ -1366,6 +1366,16 @@ module.exports = window["React"];
 
 module.exports = window["wp"]["blockEditor"];
 
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["components"];
+
 /***/ })
 
 /******/ 	});
@@ -1449,6 +1459,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 var __assign = (undefined && undefined.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -1462,10 +1474,28 @@ var __assign = (undefined && undefined.__assign) || function () {
 };
 
 
-function Edit() {
-    var blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({ className: 'grid grid-cols-4 gap-4' });
+
+function Edit(_a) {
+    var attributes = _a.attributes, setAttributes = _a.setAttributes;
+    // Dynamic class string based on attribute
+    var gridClass = "grid grid-cols-none md:grid-cols-".concat(attributes.numberOfColumns, " gap-4");
+    var blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({ className: gridClass });
     var innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps)(blockProps);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({}, innerBlocksProps)));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, { title: 'Settings', children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, { label: "Number of Columns", value: attributes.numberOfColumns, options: [
+                            { label: 'None', value: 'none' },
+                            { label: '1 Column', value: '1' },
+                            { label: '2 Columns', value: '2' },
+                            { label: '3 Columns', value: '3' },
+                            { label: '4 Columns', value: '4' },
+                            { label: '5 Columns', value: '5' },
+                            { label: '6 Columns', value: '6' },
+                            { label: '7 Columns', value: '7' },
+                            { label: '8 Columns', value: '8' },
+                            { label: '9 Columns', value: '9' },
+                            { label: '10 Columns', value: '10' },
+                            { label: '11 Columns', value: '11' },
+                            { label: '12 Columns', value: '12' }
+                        ], onChange: function (selectedOption) { return setAttributes({ numberOfColumns: selectedOption }); } }) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({}, innerBlocksProps))] }));
 }
 
 })();

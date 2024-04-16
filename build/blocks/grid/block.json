@@ -9,5 +9,9 @@
   "textdomain": "grid",
   "editorScript": "file:./index.js",
   "render": "file:./render.php",
-  "attributes": {}
+  "attributes": {
+    "numberOfColumns": {
+      "type": "string"
+    }
+  }
 }

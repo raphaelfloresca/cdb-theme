@@ -7,6 +7,21 @@ module.exports = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
+  safelist: [
+    'md:grid-cols-none',
+    'md:grid-cols-1',
+    'md:grid-cols-2',
+    'md:grid-cols-3',
+    'md:grid-cols-4',
+    'md:grid-cols-5',
+    'md:grid-cols-6',
+    'md:grid-cols-7',
+    'md:grid-cols-8',
+    'md:grid-cols-9',
+    'md:grid-cols-10',
+    'md:grid-cols-11',
+    'md:grid-cols-12'
+  ],
   prefix: "",
   theme: {
     container: {

@@ -1361,6 +1361,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 var __assign = (undefined && undefined.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -1374,10 +1376,28 @@ var __assign = (undefined && undefined.__assign) || function () {
 };
 
 
-function Edit() {
-    var blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({ className: 'grid grid-cols-4 gap-4' });
+
+function Edit(_a) {
+    var attributes = _a.attributes, setAttributes = _a.setAttributes;
+    // Dynamic class string based on attribute
+    var gridClass = "grid grid-cols-none md:grid-cols-".concat(attributes.numberOfColumns, " gap-4");
+    var blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({ className: gridClass });
     var innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps)(blockProps);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({}, innerBlocksProps)));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, { title: 'Settings', children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, { label: "Number of Columns", value: attributes.numberOfColumns, options: [
+                            { label: 'None', value: 'none' },
+                            { label: '1 Column', value: '1' },
+                            { label: '2 Columns', value: '2' },
+                            { label: '3 Columns', value: '3' },
+                            { label: '4 Columns', value: '4' },
+                            { label: '5 Columns', value: '5' },
+                            { label: '6 Columns', value: '6' },
+                            { label: '7 Columns', value: '7' },
+                            { label: '8 Columns', value: '8' },
+                            { label: '9 Columns', value: '9' },
+                            { label: '10 Columns', value: '10' },
+                            { label: '11 Columns', value: '11' },
+                            { label: '12 Columns', value: '12' }
+                        ], onChange: function (selectedOption) { return setAttributes({ numberOfColumns: selectedOption }); } }) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({}, innerBlocksProps))] }));
 }
 
 
@@ -1435,13 +1455,23 @@ module.exports = window["wp"]["blocks"];
 
 /***/ }),
 
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
 /***/ "./src/blocks/grid/block.json":
 /*!************************************!*\
   !*** ./src/blocks/grid/block.json ***!
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"creatordb/grid","version":"0.1.0","title":"Grid","category":"theme","description":"Grid component.","textdomain":"grid","editorScript":"file:./index.js","render":"file:./render.php","attributes":{}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"creatordb/grid","version":"0.1.0","title":"Grid","category":"theme","description":"Grid component.","textdomain":"grid","editorScript":"file:./index.js","render":"file:./render.php","attributes":{"numberOfColumns":{"type":"string"}}}');
 
 /***/ })
 
@@ -1525,15 +1555,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./src/blocks/grid/edit.tsx");
 /* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save */ "./src/blocks/grid/save.tsx");
 /* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/blocks/grid/block.json");
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 
 
 
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__, {
-    icon: "smiley",
-    edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
-    save: _save__WEBPACK_IMPORTED_MODULE_2__["default"]
-});
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__.name, __assign(__assign({}, _block_json__WEBPACK_IMPORTED_MODULE_3__), { edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"], save: _save__WEBPACK_IMPORTED_MODULE_2__["default"], attributes: {
+        numberOfColumns: {
+            type: 'string',
+            default: '3'
+        }
+    } }));
 
 })();
 

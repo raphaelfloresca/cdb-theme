@@ -3,8 +3,14 @@ import Edit from './edit';
 import Save from './save';
 import metadata from './block.json';
 
-registerBlockType(metadata, {
-  icon: "smiley",
+registerBlockType(metadata.name, {
+  ...metadata,
   edit: Edit,
-  save: Save
+  save: Save,
+  attributes: {
+    numberOfColumns: {
+      type: 'string',
+      default: '3'
+    }
+  }
 });
