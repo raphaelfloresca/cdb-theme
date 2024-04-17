@@ -42,3 +42,4 @@ class CDBBlock
 
 new CDBBlock('card');
 new CDBBlock('grid');
+new CDBBlock('accordion');

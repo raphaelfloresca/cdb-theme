@@ -8,8 +8,14 @@ registerBlockType(metadata.name, {
   icon: "smiley",
   edit: Edit,
   save: Save,
-  attributes: { numberOfColumns: {
-      type: "string"
+  attributes: {
+    accordionTriggers: {
+      type: "array",
+      default: [""]
+    },
+    accordionContents: {
+      type: "array",
+      default: [""]
     }
   }
 });

@@ -18,7 +18,6 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
     className?: string;
   };
 
-
   // Dynamic class string based on attribute
   const gridClass = `grid grid-cols-none md:grid-cols-${attributes.numberOfColumns} gap-4`;
 
