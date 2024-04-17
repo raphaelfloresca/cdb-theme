@@ -1573,7 +1573,7 @@ var __assign = (undefined && undefined.__assign) || function () {
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__.name, __assign(__assign({}, _block_json__WEBPACK_IMPORTED_MODULE_3__), { edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"], save: _save__WEBPACK_IMPORTED_MODULE_2__["default"], attributes: {
         numberOfColumns: {
             type: 'string',
-            default: '3'
+            default: '4'
         }
     } }));
 

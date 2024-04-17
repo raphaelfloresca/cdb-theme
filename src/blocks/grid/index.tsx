@@ -10,7 +10,7 @@ registerBlockType(metadata.name, {
   attributes: {
     numberOfColumns: {
       type: 'string',
-      default: '3'
+      default: '4'
     }
   }
 });
