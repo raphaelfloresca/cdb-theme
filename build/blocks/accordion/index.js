@@ -10173,32 +10173,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/src/components/ui/accordion */ "./src/components/ui/accordion.tsx");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _src_components_ui_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/src/components/ui/button */ "./src/components/ui/button.tsx");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
 
 
 
 
 function Edit(_a) {
     var attributes = _a.attributes, setAttributes = _a.setAttributes;
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.Accordion, { type: "single", collapsible: true, className: "w-full", children: attributes.accordionTriggers.map(function (trigger, index) {
+    var blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)();
+    function deleteAccordionTrigger(indexToDelete) {
+        var newTriggers = attributes.accordionTriggers.filter(function (x, index) {
+            return index != indexToDelete;
+        });
+        setAttributes({ accordionTriggers: newTriggers });
+    }
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({}, blockProps, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.Accordion, { type: "single", collapsible: true, className: "w-full", children: attributes.accordionTriggers.map(function (trigger, index) {
                     attributes.accordionContents.concat([""]);
-                    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionItem, { value: "item-".concat(index + 1), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionTrigger, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, { value: trigger, onChange: function (newTrigger) {
-                                        var newTriggers = attributes.accordionTriggers.concat([]);
-                                        newTriggers[index] = newTrigger;
-                                        setAttributes({ accordionTriggers: newTriggers });
-                                    }, placeholder: 'Enter a trigger...' // Display this text before any content has been added by the user
-                                 }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionContent, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, { tagName: "p", value: attributes.accordionContents[index], allowedFormats: ['core/bold', 'core/italic'], onChange: function (newContent) {
+                    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionItem, { value: "item-".concat(index + 1), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Flex, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexBlock, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionTrigger, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, { tagName: "h3", value: trigger, onChange: function (newTrigger) {
+                                                    var newTriggers = attributes.accordionTriggers.concat([]);
+                                                    newTriggers[index] = newTrigger;
+                                                    setAttributes({ accordionTriggers: newTriggers });
+                                                }, placeholder: 'Enter a trigger...' // Display this text before any content has been added by the user
+                                                , onKeyUp: function (event) {
+                                                    event.stopPropagation();
+                                                    event.preventDefault();
+                                                } }) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_button__WEBPACK_IMPORTED_MODULE_2__.Button, { onClick: function () { deleteAccordionTrigger(index); }, children: "Delete accordion item" }) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionContent, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, { tagName: "p", value: attributes.accordionContents[index], onChange: function (newContent) {
                                         var newContents = attributes.accordionContents.concat([]);
                                         newContents[index] = newContent;
                                         setAttributes({ accordionContents: newContents });
                                     }, placeholder: 'Enter content...' // Display this text before any content has been added by the user
                                  }) })] }));
-                }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, { className: "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90", onClick: function () {
+                }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_button__WEBPACK_IMPORTED_MODULE_2__.Button, { onClick: function () {
                     setAttributes({ accordionTriggers: attributes.accordionTriggers.concat([""]) });
-                }, children: "Add a new accordion item" })] }));
+                }, children: "Add a new accordion item" })] })));
 }
 
 
@@ -10288,6 +10311,83 @@ var AccordionContent = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(function (_
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Content, __assign({ ref: ref, className: "overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" }, props, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_2__.cn)("pb-4 pt-0", className), children: children }) })));
 });
 AccordionContent.displayName = _radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Content.displayName;
+
+
+
+/***/ }),
+
+/***/ "./src/components/ui/button.tsx":
+/*!**************************************!*\
+  !*** ./src/components/ui/button.tsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Button: () => (/* binding */ Button),
+/* harmony export */   buttonVariants: () => (/* binding */ buttonVariants)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _radix_ui_react_slot__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @radix-ui/react-slot */ "./node_modules/@radix-ui/react-slot/dist/index.mjs");
+/* harmony import */ var class_variance_authority__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! class-variance-authority */ "./node_modules/class-variance-authority/dist/index.mjs");
+/* harmony import */ var _src_lib_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/src/lib/utils */ "./src/lib/utils.ts");
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __rest = (undefined && undefined.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
+
+
+
+
+
+var buttonVariants = (0,class_variance_authority__WEBPACK_IMPORTED_MODULE_2__.cva)("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50", {
+    variants: {
+        variant: {
+            default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+            destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+            outline: "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+            secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+            ghost: "hover:bg-accent hover:text-accent-foreground",
+            link: "text-primary underline-offset-4 hover:underline",
+        },
+        size: {
+            default: "h-9 px-4 py-2",
+            sm: "h-8 rounded-md px-3 text-xs",
+            lg: "h-10 rounded-md px-8",
+            icon: "h-9 w-9",
+        },
+    },
+    defaultVariants: {
+        variant: "default",
+        size: "default",
+    },
+});
+var Button = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(function (_a, ref) {
+    var className = _a.className, variant = _a.variant, size = _a.size, _b = _a.asChild, asChild = _b === void 0 ? false : _b, props = __rest(_a, ["className", "variant", "size", "asChild"]);
+    var Comp = asChild ? _radix_ui_react_slot__WEBPACK_IMPORTED_MODULE_4__.Slot : "button";
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Comp, __assign({ className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_3__.cn)(buttonVariants({ variant: variant, size: size, className: className })), ref: ref }, props)));
+});
+Button.displayName = "Button";
 
 
 
@@ -11891,6 +11991,82 @@ __webpack_require__.r(__webpack_exports__);
 
 //# sourceMappingURL=index.mjs.map
 
+
+/***/ }),
+
+/***/ "./node_modules/class-variance-authority/dist/index.mjs":
+/*!**************************************************************!*\
+  !*** ./node_modules/class-variance-authority/dist/index.mjs ***!
+  \**************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   cva: () => (/* binding */ cva),
+/* harmony export */   cx: () => (/* binding */ cx)
+/* harmony export */ });
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! clsx */ "./node_modules/class-variance-authority/node_modules/clsx/dist/clsx.mjs");
+
+const falsyToString = (value)=>typeof value === "boolean" ? "".concat(value) : value === 0 ? "0" : value;
+const cx = clsx__WEBPACK_IMPORTED_MODULE_0__.clsx;
+const cva = (base, config)=>{
+    return (props)=>{
+        var ref;
+        if ((config === null || config === void 0 ? void 0 : config.variants) == null) return cx(base, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
+        const { variants , defaultVariants  } = config;
+        const getVariantClassNames = Object.keys(variants).map((variant)=>{
+            const variantProp = props === null || props === void 0 ? void 0 : props[variant];
+            const defaultVariantProp = defaultVariants === null || defaultVariants === void 0 ? void 0 : defaultVariants[variant];
+            if (variantProp === null) return null;
+            const variantKey = falsyToString(variantProp) || falsyToString(defaultVariantProp);
+            return variants[variant][variantKey];
+        });
+        const propsWithoutUndefined = props && Object.entries(props).reduce((acc, param)=>{
+            let [key, value] = param;
+            if (value === undefined) {
+                return acc;
+            }
+            acc[key] = value;
+            return acc;
+        }, {});
+        const getCompoundVariantClassNames = config === null || config === void 0 ? void 0 : (ref = config.compoundVariants) === null || ref === void 0 ? void 0 : ref.reduce((acc, param1)=>{
+            let { class: cvClass , className: cvClassName , ...compoundVariantOptions } = param1;
+            return Object.entries(compoundVariantOptions).every((param)=>{
+                let [key, value] = param;
+                return Array.isArray(value) ? value.includes({
+                    ...defaultVariants,
+                    ...propsWithoutUndefined
+                }[key]) : ({
+                    ...defaultVariants,
+                    ...propsWithoutUndefined
+                })[key] === value;
+            }) ? [
+                ...acc,
+                cvClass,
+                cvClassName
+            ] : acc;
+        }, []);
+        return cx(base, getVariantClassNames, getCompoundVariantClassNames, props === null || props === void 0 ? void 0 : props.class, props === null || props === void 0 ? void 0 : props.className);
+    };
+};
+
+
+//# sourceMappingURL=index.mjs.map
+
+/***/ }),
+
+/***/ "./node_modules/class-variance-authority/node_modules/clsx/dist/clsx.mjs":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/class-variance-authority/node_modules/clsx/dist/clsx.mjs ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   clsx: () => (/* binding */ clsx),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function r(e){var t,f,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e))for(t=0;t<e.length;t++)e[t]&&(f=r(e[t]))&&(n&&(n+=" "),n+=f);else for(t in e)e[t]&&(n&&(n+=" "),n+=t);return n}function clsx(){for(var e,t,f=0,n="";f<arguments.length;)(e=arguments[f++])&&(t=r(e))&&(n&&(n+=" "),n+=t);return n}/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (clsx);
 
 /***/ }),
 
@@ -14519,7 +14695,7 @@ const twMerge = /*#__PURE__*/createTailwindMerge(getDefaultConfig);
   \*****************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"creatordb/accordion","version":"0.1.0","title":"Accordion","category":"theme","description":"Accordion component powered by shadcn/ui.","textdomain":"accordion","editorScript":"file:./index.js","render":"file:./render.php","attributes":{}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"creatordb/accordion","version":"0.1.0","title":"Accordion","category":"theme","description":"Accordion component powered by shadcn/ui.","textdomain":"accordion","editorScript":"file:./index.js","viewScript":"file:./view.js","render":"file:./render.php","attributes":{}}');
 
 /***/ })
 

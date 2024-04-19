@@ -33,7 +33,6 @@ class CDBBlock
     add_action('init', [$this, 'on_init']);
   }
 
-
   function on_init()
   {
     register_block_type(__DIR__ . "/build/blocks/{$this->name}");
