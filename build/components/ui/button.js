@@ -1362,11 +1362,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tailwind_merge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tailwind-merge */ "./node_modules/tailwind-merge/dist/bundle-mjs.mjs");
 
 
-function cn() {
-    var inputs = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        inputs[_i] = arguments[_i];
-    }
+function cn(...inputs) {
     return (0,tailwind_merge__WEBPACK_IMPORTED_MODULE_1__.twMerge)((0,clsx__WEBPACK_IMPORTED_MODULE_0__.clsx)(inputs));
 }
 
@@ -4345,17 +4341,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _radix_ui_react_slot__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @radix-ui/react-slot */ "./node_modules/@radix-ui/react-slot/dist/index.mjs");
 /* harmony import */ var class_variance_authority__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! class-variance-authority */ "./node_modules/class-variance-authority/dist/index.mjs");
 /* harmony import */ var _src_lib_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/src/lib/utils */ "./src/lib/utils.ts");
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __rest = (undefined && undefined.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -4372,7 +4357,7 @@ var __rest = (undefined && undefined.__rest) || function (s, e) {
 
 
 
-var buttonVariants = (0,class_variance_authority__WEBPACK_IMPORTED_MODULE_2__.cva)("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50", {
+const buttonVariants = (0,class_variance_authority__WEBPACK_IMPORTED_MODULE_2__.cva)("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50", {
     variants: {
         variant: {
             default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
@@ -4394,10 +4379,10 @@ var buttonVariants = (0,class_variance_authority__WEBPACK_IMPORTED_MODULE_2__.cv
         size: "default",
     },
 });
-var Button = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(function (_a, ref) {
-    var className = _a.className, variant = _a.variant, size = _a.size, _b = _a.asChild, asChild = _b === void 0 ? false : _b, props = __rest(_a, ["className", "variant", "size", "asChild"]);
-    var Comp = asChild ? _radix_ui_react_slot__WEBPACK_IMPORTED_MODULE_4__.Slot : "button";
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Comp, __assign({ className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_3__.cn)(buttonVariants({ variant: variant, size: size, className: className })), ref: ref }, props)));
+const Button = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef((_a, ref) => {
+    var { className, variant, size, asChild = false } = _a, props = __rest(_a, ["className", "variant", "size", "asChild"]);
+    const Comp = asChild ? _radix_ui_react_slot__WEBPACK_IMPORTED_MODULE_4__.Slot : "button";
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Comp, Object.assign({ className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_3__.cn)(buttonVariants({ variant, size, className })), ref: ref }, props)));
 });
 Button.displayName = "Button";
 

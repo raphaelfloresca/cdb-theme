@@ -1461,26 +1461,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 
 
 
-function Edit(_a) {
-    var attributes = _a.attributes, setAttributes = _a.setAttributes;
+function Edit({ attributes, setAttributes }) {
     // Dynamic class string based on attribute
-    var gridClass = "grid grid-cols-none md:grid-cols-".concat(attributes.numberOfColumns, " gap-4");
-    var blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({ className: gridClass });
-    var innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps)(blockProps);
+    const gridClass = `grid grid-cols-none md:grid-cols-${attributes.numberOfColumns} gap-4`;
+    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({ className: gridClass });
+    const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps)(blockProps);
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, { title: 'Settings', children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, { label: "Number of Columns", value: attributes.numberOfColumns, options: [
                             { label: 'None', value: 'none' },
                             { label: '1 Column', value: '1' },
@@ -1495,7 +1483,7 @@ function Edit(_a) {
                             { label: '10 Columns', value: '10' },
                             { label: '11 Columns', value: '11' },
                             { label: '12 Columns', value: '12' }
-                        ], onChange: function (selectedOption) { return setAttributes({ numberOfColumns: selectedOption }); } }) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", __assign({}, innerBlocksProps))] }));
+                        ], onChange: (selectedOption) => setAttributes({ numberOfColumns: selectedOption }) }) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", Object.assign({}, innerBlocksProps))] }));
 }
 
 })();

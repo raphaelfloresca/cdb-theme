@@ -10178,48 +10178,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 
 
 
 
 
-function Edit(_a) {
-    var attributes = _a.attributes, setAttributes = _a.setAttributes;
-    var blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)();
+function Edit({ attributes, setAttributes }) {
+    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)();
     function deleteAccordionTrigger(indexToDelete) {
-        var newTriggers = attributes.accordionTriggers.filter(function (x, index) {
+        const newTriggers = attributes.accordionTriggers.filter(function (x, index) {
             return index != indexToDelete;
         });
         setAttributes({ accordionTriggers: newTriggers });
     }
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", __assign({}, blockProps, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.Accordion, { type: "single", collapsible: true, className: "w-full", children: attributes.accordionTriggers.map(function (trigger, index) {
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", Object.assign({}, blockProps, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.Accordion, { type: "single", collapsible: true, className: "w-full", children: attributes.accordionTriggers.map(function (trigger, index) {
                     attributes.accordionContents.concat([""]);
-                    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionItem, { value: "item-".concat(index + 1), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Flex, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexBlock, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionTrigger, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, { tagName: "h3", value: trigger, onChange: function (newTrigger) {
-                                                    var newTriggers = attributes.accordionTriggers.concat([]);
+                    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionItem, { value: `item-${index + 1}`, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Flex, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexBlock, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionTrigger, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, { tagName: "h3", value: trigger, onChange: (newTrigger) => {
+                                                    const newTriggers = attributes.accordionTriggers.concat([]);
                                                     newTriggers[index] = newTrigger;
                                                     setAttributes({ accordionTriggers: newTriggers });
                                                 }, placeholder: 'Enter a trigger...' // Display this text before any content has been added by the user
-                                                , onKeyUp: function (event) {
+                                                , onKeyUp: (event) => {
                                                     event.stopPropagation();
                                                     event.preventDefault();
-                                                } }) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_button__WEBPACK_IMPORTED_MODULE_2__.Button, { onClick: function () { deleteAccordionTrigger(index); }, children: "Delete accordion item" }) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionContent, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, { tagName: "p", value: attributes.accordionContents[index], onChange: function (newContent) {
-                                        var newContents = attributes.accordionContents.concat([]);
+                                                } }) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_button__WEBPACK_IMPORTED_MODULE_2__.Button, { onClick: () => { deleteAccordionTrigger(index); }, children: "Delete accordion item" }) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionContent, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, { tagName: "p", value: attributes.accordionContents[index], onChange: (newContent) => {
+                                        const newContents = attributes.accordionContents.concat([]);
                                         newContents[index] = newContent;
                                         setAttributes({ accordionContents: newContents });
                                     }, placeholder: 'Enter content...' // Display this text before any content has been added by the user
                                  }) })] }));
-                }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_button__WEBPACK_IMPORTED_MODULE_2__.Button, { onClick: function () {
+                }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_button__WEBPACK_IMPORTED_MODULE_2__.Button, { onClick: () => {
                     setAttributes({ accordionTriggers: attributes.accordionTriggers.concat([""]) });
                 }, children: "Add a new accordion item" })] })));
 }
@@ -10237,13 +10225,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Save)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-
-
 function Save() {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, {}));
+    return null;
 }
 
 
@@ -10268,17 +10251,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @radix-ui/react-accordion */ "./node_modules/@radix-ui/react-accordion/dist/index.mjs");
 /* harmony import */ var _radix_ui_react_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @radix-ui/react-icons */ "./node_modules/@radix-ui/react-icons/dist/react-icons.esm.js");
 /* harmony import */ var _src_lib_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/src/lib/utils */ "./src/lib/utils.ts");
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __rest = (undefined && undefined.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -10295,20 +10267,20 @@ var __rest = (undefined && undefined.__rest) || function (s, e) {
 
 
 
-var Accordion = _radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Root;
-var AccordionItem = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(function (_a, ref) {
-    var className = _a.className, props = __rest(_a, ["className"]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Item, __assign({ ref: ref, className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_2__.cn)("border-b", className) }, props)));
+const Accordion = _radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Root;
+const AccordionItem = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef((_a, ref) => {
+    var { className } = _a, props = __rest(_a, ["className"]);
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Item, Object.assign({ ref: ref, className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_2__.cn)("border-b", className) }, props)));
 });
 AccordionItem.displayName = "AccordionItem";
-var AccordionTrigger = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(function (_a, ref) {
-    var className = _a.className, children = _a.children, props = __rest(_a, ["className", "children"]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Header, { className: "flex", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Trigger, __assign({ ref: ref, className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_2__.cn)("flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180", className) }, props, { children: [children, (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_radix_ui_react_icons__WEBPACK_IMPORTED_MODULE_4__.ChevronDownIcon, { className: "h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" })] })) }));
+const AccordionTrigger = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef((_a, ref) => {
+    var { className, children } = _a, props = __rest(_a, ["className", "children"]);
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Header, { className: "flex", children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Trigger, Object.assign({ ref: ref, className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_2__.cn)("flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180", className) }, props, { children: [children, (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_radix_ui_react_icons__WEBPACK_IMPORTED_MODULE_4__.ChevronDownIcon, { className: "h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" })] })) }));
 });
 AccordionTrigger.displayName = _radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Trigger.displayName;
-var AccordionContent = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(function (_a, ref) {
-    var className = _a.className, children = _a.children, props = __rest(_a, ["className", "children"]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Content, __assign({ ref: ref, className: "overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" }, props, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_2__.cn)("pb-4 pt-0", className), children: children }) })));
+const AccordionContent = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef((_a, ref) => {
+    var { className, children } = _a, props = __rest(_a, ["className", "children"]);
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Content, Object.assign({ ref: ref, className: "overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" }, props, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_2__.cn)("pb-4 pt-0", className), children: children }) })));
 });
 AccordionContent.displayName = _radix_ui_react_accordion__WEBPACK_IMPORTED_MODULE_3__.Content.displayName;
 
@@ -10333,17 +10305,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _radix_ui_react_slot__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @radix-ui/react-slot */ "./node_modules/@radix-ui/react-slot/dist/index.mjs");
 /* harmony import */ var class_variance_authority__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! class-variance-authority */ "./node_modules/class-variance-authority/dist/index.mjs");
 /* harmony import */ var _src_lib_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/src/lib/utils */ "./src/lib/utils.ts");
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __rest = (undefined && undefined.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -10360,7 +10321,7 @@ var __rest = (undefined && undefined.__rest) || function (s, e) {
 
 
 
-var buttonVariants = (0,class_variance_authority__WEBPACK_IMPORTED_MODULE_2__.cva)("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50", {
+const buttonVariants = (0,class_variance_authority__WEBPACK_IMPORTED_MODULE_2__.cva)("inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50", {
     variants: {
         variant: {
             default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
@@ -10382,10 +10343,10 @@ var buttonVariants = (0,class_variance_authority__WEBPACK_IMPORTED_MODULE_2__.cv
         size: "default",
     },
 });
-var Button = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef(function (_a, ref) {
-    var className = _a.className, variant = _a.variant, size = _a.size, _b = _a.asChild, asChild = _b === void 0 ? false : _b, props = __rest(_a, ["className", "variant", "size", "asChild"]);
-    var Comp = asChild ? _radix_ui_react_slot__WEBPACK_IMPORTED_MODULE_4__.Slot : "button";
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Comp, __assign({ className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_3__.cn)(buttonVariants({ variant: variant, size: size, className: className })), ref: ref }, props)));
+const Button = react__WEBPACK_IMPORTED_MODULE_1__.forwardRef((_a, ref) => {
+    var { className, variant, size, asChild = false } = _a, props = __rest(_a, ["className", "variant", "size", "asChild"]);
+    const Comp = asChild ? _radix_ui_react_slot__WEBPACK_IMPORTED_MODULE_4__.Slot : "button";
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Comp, Object.assign({ className: (0,_src_lib_utils__WEBPACK_IMPORTED_MODULE_3__.cn)(buttonVariants({ variant, size, className })), ref: ref }, props)));
 });
 Button.displayName = "Button";
 
@@ -10407,11 +10368,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tailwind_merge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tailwind-merge */ "./node_modules/tailwind-merge/dist/bundle-mjs.mjs");
 
 
-function cn() {
-    var inputs = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        inputs[_i] = arguments[_i];
-    }
+function cn(...inputs) {
     return (0,tailwind_merge__WEBPACK_IMPORTED_MODULE_1__.twMerge)((0,clsx__WEBPACK_IMPORTED_MODULE_0__.clsx)(inputs));
 }
 
@@ -14809,22 +14766,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./src/blocks/accordion/edit.tsx");
 /* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save */ "./src/blocks/accordion/save.tsx");
 /* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/blocks/accordion/block.json");
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 
 
 
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__.name, __assign(__assign({}, _block_json__WEBPACK_IMPORTED_MODULE_3__), { icon: "smiley", edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"], save: _save__WEBPACK_IMPORTED_MODULE_2__["default"], attributes: {
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__.name, Object.assign(Object.assign({}, _block_json__WEBPACK_IMPORTED_MODULE_3__), { icon: "smiley", edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"], save: _save__WEBPACK_IMPORTED_MODULE_2__["default"], attributes: {
         accordionTriggers: {
             type: "array",
             default: [""]

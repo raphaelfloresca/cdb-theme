@@ -10,8 +10,8 @@
     "jsx": "react-jsx",
     // We want ESM supported in the output, because WebPack is going to bundle this anyways,
     // and we want the tree-shaking support and some other benefits
-    "module": "ESNext",
-    "target": "ES5",
+    "module": "ES6",
+    "target": "ES6",
     // == Now for some settings that are not *strictly* required, but I recommend:
     // Embrace strong-typing!
     "strict": true,
@@ -20,6 +20,6 @@
     // Recommended
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true
   }
 }

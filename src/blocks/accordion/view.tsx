@@ -1,29 +1,46 @@
-import { createRoot } from 'react-dom'
+import { render } from 'react-dom'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/src/components/ui/accordion"
+import { RichText } from "@wordpress/block-editor"
 
-const divsToUpdate = document.querySelectorAll(".accordion-container")
+// Define an interface for the attributes your block uses
+interface FrontendProps {
+  accordionTriggers: string[],
+  accordionContents: string[],
+}
 
-divsToUpdate.forEach(function(div) {
-  let root = createRoot(div)
-  root.render(<CDBAccordion />)
-})
+document.querySelectorAll(".accordion-block").forEach(div => {
+  const triggers = JSON.parse(div.getAttribute('data-accordiontriggers') as string);
+  const contents = JSON.parse(div.getAttribute('data-accordioncontents') as string);
 
-function CDBAccordion() {
+  render(<CDBAccordion accordionTriggers={triggers} accordionContents={contents} />, div);
+});
+
+function CDBAccordion(props: FrontendProps) {
   return (
-    <Accordion type="single" collapsible className="w-full">
-      <AccordionItem value="item-1">
-        <AccordionTrigger>
-          Test
-        </AccordionTrigger>
-        <AccordionContent>
-          Test
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
-  )
+    <div>
+      <Accordion type="single" collapsible className="w-full">
+        {props.accordionTriggers.map(function(trigger, index) {
+          return (
+            <AccordionItem value={`item-${index + 1}`}>
+              <AccordionTrigger>
+                <RichText.Content
+                  value={trigger} // Any existing content, either from the database or an attribute default
+                />
+              </AccordionTrigger>
+              <AccordionContent>
+                <RichText.Content
+                  value={props.accordionContents[index]} // Any existing content, either from the database or an attribute default
+                />
+              </AccordionContent>
+            </AccordionItem>
+          )
+        })}
+      </Accordion>
+    </div>
+  );
 }

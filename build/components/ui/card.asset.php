@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('react', 'wp-polyfill'), 'version' => '9802b016b3fc2c0d2d6e');
+<?php return array('dependencies' => array('react', 'wp-polyfill'), 'version' => '2947a8979c1b63165af8');
