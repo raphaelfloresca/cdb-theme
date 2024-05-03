@@ -11,6 +11,8 @@ function camel_to_kebab($input)
 
 function render_my_block($attributes)
 {
+  print_r($attributes);
+
   $dataAttributes = '';
   foreach ($attributes as $key => $value) {
     if (is_array($value)) {
@@ -22,7 +24,7 @@ function render_my_block($attributes)
       $dataAttributes .= ' data-' . esc_attr(camel_to_kebab($key)) . '="' . esc_attr($value) . '"';
     }
   }
-  return "<div class='accordion-block' {$dataAttributes}></div>";
+  return "<div class='button-block' {$dataAttributes}></div>";
 }
 
 echo render_my_block($attributes);

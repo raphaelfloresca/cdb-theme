@@ -14,10 +14,10 @@ interface FrontendProps {
 }
 
 document.querySelectorAll(".accordion-block").forEach(div => {
-  const triggers = JSON.parse(div.getAttribute('data-accordiontriggers') as string);
-  const contents = JSON.parse(div.getAttribute('data-accordioncontents') as string);
+  const accordionTriggers = JSON.parse(div.getAttribute('data-accordion-triggers') as string);
+  const accordionContents = JSON.parse(div.getAttribute('data-accordion-contents') as string);
 
-  render(<CDBAccordion accordionTriggers={triggers} accordionContents={contents} />, div);
+  render(<CDBAccordion accordionTriggers={accordionTriggers} accordionContents={accordionContents} />, div);
 });
 
 function CDBAccordion(props: FrontendProps) {

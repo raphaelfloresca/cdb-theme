@@ -14529,9 +14529,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.querySelectorAll(".accordion-block").forEach(div => {
-    const triggers = JSON.parse(div.getAttribute('data-accordiontriggers'));
-    const contents = JSON.parse(div.getAttribute('data-accordioncontents'));
-    (0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CDBAccordion, { accordionTriggers: triggers, accordionContents: contents }), div);
+    const accordionTriggers = JSON.parse(div.getAttribute('data-accordion-triggers'));
+    const accordionContents = JSON.parse(div.getAttribute('data-accordion-contents'));
+    (0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CDBAccordion, { accordionTriggers: accordionTriggers, accordionContents: accordionContents }), div);
 });
 function CDBAccordion(props) {
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_2__.Accordion, { type: "single", collapsible: true, className: "w-full", children: props.accordionTriggers.map(function (trigger, index) {
