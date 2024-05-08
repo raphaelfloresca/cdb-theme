@@ -9,9 +9,9 @@ registerBlockType(metadata.name, {
   edit: Edit,
   save: Save,
   attributes: {
-    noOfButtonClicks: {
-      type: "number",
-      default: 300,
-    },
+    sectionToggle: {
+      type: "boolean",
+      default: false
+    }
   }
 });

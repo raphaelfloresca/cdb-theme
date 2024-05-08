@@ -1,312 +1,332 @@
 {
-  "settings": {
-    "appearanceTools": true,
-    "shadow": {
-      "presets": [
-        {
-          "name": "Small",
-          "slug": "sm",
-          "shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
-        },
-        {
-          "name": "Medium",
-          "slug": "md",
-          "shadow": "0 4px  10px 0 rgba( 0, 0, 0, 0.3 )"
-        },
-        {
-          "name": "Large",
-          "slug": "lg",
-          "shadow": "0 8px  15px 0 rgba( 0, 0, 0, 0.3 )"
-        }
-      ]
-    },
-    "color": {
-      "palette": [
-        {
-          "color": "#1c1549",
-          "name": "CDB Blue 900",
-          "slug": "custom-cdb-blue-900"
-        },
-        {
-          "color": "#ff6117",
-          "name": "CDB Orange 450",
-          "slug": "custom-cdb-orange-450"
-        },
-        {
-          "color": "#000",
-          "name": "CDB Black",
-          "slug": "custom-cdb-black"
-        },
-        {
-          "color": "#ffffff",
-          "name": "CDB White",
-          "slug": "custom-cdb-white"
-        },
-        {
-          "color": "#f6f5ff",
-          "name": "CDB Blue 25",
-          "slug": "custom-cdb-blue-25"
-        },
-        {
-          "color": "#edeaff",
-          "name": "CDB Blue 50",
-          "slug": "custom-cdb-blue-50"
-        },
-        {
-          "color": "#d2cdf3",
-          "name": "CDB Blue 100",
-          "slug": "custom-cdb-blue-100"
-        },
-        {
-          "color": "#bbb4ec",
-          "name": "CDB Blue 200",
-          "slug": "custom-cdb-blue-200"
-        },
-        {
-          "color": "#8e82e2",
-          "name": "CDB Blue 300",
-          "slug": "custom-cdb-blue-300"
-        },
-        {
-          "color": "#6b5bd7",
-          "name": "CDB Blue 400",
-          "slug": "custom-cdb-blue-400"
-        },
-        {
-          "color": "#5240cc",
-          "name": "CDB Blue 450",
-          "slug": "custom-cdb-blue-450"
-        },
-        {
-          "color": "#4333b0",
-          "name": "CDB Blue 550",
-          "slug": "custom-cdb-blue-550"
-        },
-        {
-          "color": "#35288a",
-          "name": "CDB Blue 650",
-          "slug": "custom-cdb-blue-650"
-        },
-        {
-          "color": "#261d64",
-          "name": "CDB Blue 750",
-          "slug": "custom-cdb-blue-750"
-        },
-        {
-          "color": "#fff6f2",
-          "name": "CDB Orange 25",
-          "slug": "custom-cdb-orange-25"
-        },
-        {
-          "color": "#ffede5",
-          "name": "CDB Orange 50",
-          "slug": "custom-cdb-orange-50"
-        },
-        {
-          "color": "#ffd7c5",
-          "name": "CDB Orange 100",
-          "slug": "custom-cdb-orange-100"
-        },
-        {
-          "color": "#ffb08b",
-          "name": "CDB Orange 200",
-          "slug": "custom-cdb-orange-200"
-        },
-        {
-          "color": "#ff9664",
-          "name": "CDB Orange 300",
-          "slug": "custom-cdb-orange-300"
-        },
-        {
-          "color": "#ff7b3e",
-          "name": "CDB Orange 400",
-          "slug": "custom-cdb-orange-400"
-        },
-        {
-          "color": "#de4700",
-          "name": "CDB Orange 550",
-          "slug": "custom-cdb-orange-550"
-        },
-        {
-          "color": "#a73500",
-          "name": "CDB Orange 650",
-          "slug": "custom-cdb-orange-650"
-        },
-        {
-          "color": "#6f2300",
-          "name": "CDB Orange 750",
-          "slug": "custom-cdb-orange-750"
-        },
-        {
-          "color": "#381200",
-          "name": "CDB Orange 900",
-          "slug": "custom-cdb-orange-900"
-        },
-        {
-          "color": "#fafbfc",
-          "name": "CDB Gray 25",
-          "slug": "custom-cdb-gray-25"
-        },
-        {
-          "color": "#f6f6f8",
-          "name": "CDB Gray 50",
-          "slug": "custom-cdb-gray-50"
-        },
-        {
-          "color": "#ececee",
-          "name": "CDB Gray 100",
-          "slug": "custom-cdb-gray-100"
-        },
-        {
-          "color": "#dadade",
-          "name": "CDB Gray 150",
-          "slug": "custom-cdb-gray-150"
-        },
-        {
-          "color": "#cfcfd3",
-          "name": "CDB Gray 200",
-          "slug": "custom-cdb-gray-200"
-        },
-        {
-          "color": "#bdbdc2",
-          "name": "CDB Gray 250",
-          "slug": "custom-cdb-gray-250"
-        },
-        {
-          "color": "#afafb5",
-          "name": "CDB Gray 300",
-          "slug": "custom-cdb-gray-300"
-        },
-        {
-          "color": "#9c9ca3",
-          "name": "CDB Gray 400",
-          "slug": "custom-cdb-gray-400"
-        },
-        {
-          "color": "#898991",
-          "name": "CDB Gray 450",
-          "slug": "custom-cdb-gray-450"
-        },
-        {
-          "color": "#7b7b84",
-          "name": "CDB Gray 500",
-          "slug": "custom-cdb-gray-500"
-        },
-        {
-          "color": "#6e6e76",
-          "name": "CDB Gray 550",
-          "slug": "custom-cdb-gray-550"
-        },
-        {
-          "color": "#626269",
-          "name": "CDB Gray 600",
-          "slug": "custom-cdb-gray-600"
-        },
-        {
-          "color": "#505057",
-          "name": "CDB Gray 700",
-          "slug": "custom-cdb-gray-700"
-        },
-        {
-          "color": "#3e3e43",
-          "name": "CDB Gray 750",
-          "slug": "custom-cdb-gray-750"
-        },
-        {
-          "color": "#37373b",
-          "name": "CDB Gray 800",
-          "slug": "custom-cdb-gray-800"
-        },
-        {
-          "color": "#262629",
-          "name": "CDB Gray 850",
-          "slug": "custom-cdb-gray-850"
-        },
-        {
-          "color": "#1f1f21",
-          "name": "CDB Gray 870",
-          "slug": "custom-cdb-gray-870"
-        },
-        {
-          "color": "#111111",
-          "name": "CDB Gray 900",
-          "slug": "custom-cdb-gray-900"
-        }
-      ]
-    },
-    "layout": {
-      "contentSize": "1280px",
-      "wideSize": "100%"
-    },
-    "spacing": {
-      "units": [
-        "%",
-        "px",
-        "em",
-        "rem",
-        "vh",
-        "vw"
-      ]
-    },
-    "typography": {
-      "fontFamilies": [
-        {
-          "fontFamily": "Inter",
-          "slug": "inter",
-          "fontFace": [
-            {
-              "fontFamily": "Inter",
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "src": [
-                "file:./assets/fonts/inter_normal_400.ttf"
-              ]
-            },
-            {
-              "fontFamily": "Inter",
-              "fontStyle": "normal",
-              "fontWeight": "500",
-              "src": [
-                "file:./assets/fonts/inter_normal_500.ttf"
-              ]
-            },
-            {
-              "fontFamily": "Inter",
-              "fontStyle": "normal",
-              "fontWeight": "600",
-              "src": [
-                "file:./assets/fonts/inter_normal_600.ttf"
-              ]
-            },
-            {
-              "fontFamily": "Inter",
-              "fontStyle": "normal",
-              "fontWeight": "700",
-              "src": [
-                "file:./assets/fonts/inter_normal_700.ttf"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "useRootPaddingAwareAlignments": true
-  },
-  "styles": {
-    "typography": {
-      "fontFamily": "var(--wp--preset--font-family--inter)"
-    }
-  },
-  "templateParts": [
-    {
-      "area": "header",
-      "name": "header"
-    },
-    {
-      "area": "footer",
-      "name": "footer"
-    }
-  ],
-  "version": 2,
-  "$schema": "https://schemas.wp.org/wp/6.6/theme.json"
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"color": "#1c1549",
+					"name": "CDB Blue 900",
+					"slug": "custom-cdb-blue-900"
+				},
+				{
+					"color": "#ff6117",
+					"name": "CDB Orange 450",
+					"slug": "custom-cdb-orange-450"
+				},
+				{
+					"color": "#000",
+					"name": "CDB Black",
+					"slug": "custom-cdb-black"
+				},
+				{
+					"color": "#ffffff",
+					"name": "CDB White",
+					"slug": "custom-cdb-white"
+				},
+				{
+					"color": "#f6f5ff",
+					"name": "CDB Blue 25",
+					"slug": "custom-cdb-blue-25"
+				},
+				{
+					"color": "#edeaff",
+					"name": "CDB Blue 50",
+					"slug": "custom-cdb-blue-50"
+				},
+				{
+					"color": "#d2cdf3",
+					"name": "CDB Blue 100",
+					"slug": "custom-cdb-blue-100"
+				},
+				{
+					"color": "#bbb4ec",
+					"name": "CDB Blue 200",
+					"slug": "custom-cdb-blue-200"
+				},
+				{
+					"color": "#8e82e2",
+					"name": "CDB Blue 300",
+					"slug": "custom-cdb-blue-300"
+				},
+				{
+					"color": "#6b5bd7",
+					"name": "CDB Blue 400",
+					"slug": "custom-cdb-blue-400"
+				},
+				{
+					"color": "#5240cc",
+					"name": "CDB Blue 450",
+					"slug": "custom-cdb-blue-450"
+				},
+				{
+					"color": "#4333b0",
+					"name": "CDB Blue 550",
+					"slug": "custom-cdb-blue-550"
+				},
+				{
+					"color": "#35288a",
+					"name": "CDB Blue 650",
+					"slug": "custom-cdb-blue-650"
+				},
+				{
+					"color": "#261d64",
+					"name": "CDB Blue 750",
+					"slug": "custom-cdb-blue-750"
+				},
+				{
+					"color": "#fff6f2",
+					"name": "CDB Orange 25",
+					"slug": "custom-cdb-orange-25"
+				},
+				{
+					"color": "#ffede5",
+					"name": "CDB Orange 50",
+					"slug": "custom-cdb-orange-50"
+				},
+				{
+					"color": "#ffd7c5",
+					"name": "CDB Orange 100",
+					"slug": "custom-cdb-orange-100"
+				},
+				{
+					"color": "#ffb08b",
+					"name": "CDB Orange 200",
+					"slug": "custom-cdb-orange-200"
+				},
+				{
+					"color": "#ff9664",
+					"name": "CDB Orange 300",
+					"slug": "custom-cdb-orange-300"
+				},
+				{
+					"color": "#ff7b3e",
+					"name": "CDB Orange 400",
+					"slug": "custom-cdb-orange-400"
+				},
+				{
+					"color": "#de4700",
+					"name": "CDB Orange 550",
+					"slug": "custom-cdb-orange-550"
+				},
+				{
+					"color": "#a73500",
+					"name": "CDB Orange 650",
+					"slug": "custom-cdb-orange-650"
+				},
+				{
+					"color": "#6f2300",
+					"name": "CDB Orange 750",
+					"slug": "custom-cdb-orange-750"
+				},
+				{
+					"color": "#381200",
+					"name": "CDB Orange 900",
+					"slug": "custom-cdb-orange-900"
+				},
+				{
+					"color": "#fafbfc",
+					"name": "CDB Gray 25",
+					"slug": "custom-cdb-gray-25"
+				},
+				{
+					"color": "#f6f6f8",
+					"name": "CDB Gray 50",
+					"slug": "custom-cdb-gray-50"
+				},
+				{
+					"color": "#ececee",
+					"name": "CDB Gray 100",
+					"slug": "custom-cdb-gray-100"
+				},
+				{
+					"color": "#dadade",
+					"name": "CDB Gray 150",
+					"slug": "custom-cdb-gray-150"
+				},
+				{
+					"color": "#cfcfd3",
+					"name": "CDB Gray 200",
+					"slug": "custom-cdb-gray-200"
+				},
+				{
+					"color": "#bdbdc2",
+					"name": "CDB Gray 250",
+					"slug": "custom-cdb-gray-250"
+				},
+				{
+					"color": "#afafb5",
+					"name": "CDB Gray 300",
+					"slug": "custom-cdb-gray-300"
+				},
+				{
+					"color": "#9c9ca3",
+					"name": "CDB Gray 400",
+					"slug": "custom-cdb-gray-400"
+				},
+				{
+					"color": "#898991",
+					"name": "CDB Gray 450",
+					"slug": "custom-cdb-gray-450"
+				},
+				{
+					"color": "#7b7b84",
+					"name": "CDB Gray 500",
+					"slug": "custom-cdb-gray-500"
+				},
+				{
+					"color": "#6e6e76",
+					"name": "CDB Gray 550",
+					"slug": "custom-cdb-gray-550"
+				},
+				{
+					"color": "#626269",
+					"name": "CDB Gray 600",
+					"slug": "custom-cdb-gray-600"
+				},
+				{
+					"color": "#505057",
+					"name": "CDB Gray 700",
+					"slug": "custom-cdb-gray-700"
+				},
+				{
+					"color": "#3e3e43",
+					"name": "CDB Gray 750",
+					"slug": "custom-cdb-gray-750"
+				},
+				{
+					"color": "#37373b",
+					"name": "CDB Gray 800",
+					"slug": "custom-cdb-gray-800"
+				},
+				{
+					"color": "#262629",
+					"name": "CDB Gray 850",
+					"slug": "custom-cdb-gray-850"
+				},
+				{
+					"color": "#1f1f21",
+					"name": "CDB Gray 870",
+					"slug": "custom-cdb-gray-870"
+				},
+				{
+					"color": "#111111",
+					"name": "CDB Gray 900",
+					"slug": "custom-cdb-gray-900"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "1280px",
+			"wideSize": "100%"
+		},
+		"shadow": {
+			"presets": [
+				{
+					"name": "Small",
+					"shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+					"slug": "sm"
+				},
+				{
+					"name": "Medium",
+					"shadow": "0 4px  10px 0 rgba( 0, 0, 0, 0.3 )",
+					"slug": "md"
+				},
+				{
+					"name": "Large",
+					"shadow": "0 8px  15px 0 rgba( 0, 0, 0, 0.3 )",
+					"slug": "lg"
+				}
+			]
+		},
+		"spacing": {
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Inter",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/inter_normal_400.ttf"
+							]
+						},
+						{
+							"fontFamily": "Inter",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": [
+								"file:./assets/fonts/inter_normal_500.ttf"
+							]
+						},
+						{
+							"fontFamily": "Inter",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/inter_normal_600.ttf"
+							]
+						},
+						{
+							"fontFamily": "Inter",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/inter_normal_700.ttf"
+							]
+						}
+					],
+					"fontFamily": "Inter",
+					"slug": "inter"
+				}
+			]
+		},
+		"useRootPaddingAwareAlignments": true
+	},
+	"styles": {
+		"blocks": {
+			"core/column": {
+				"spacing": {
+					"blockGap": "var(--wp--preset--spacing--50)"
+				}
+			},
+			"core/group": {
+				"spacing": {
+					"blockGap": "var(--wp--preset--spacing--50)",
+					"padding": {
+						"left": "0",
+						"right": "0"
+					}
+				}
+			}
+		},
+		"css": ".mega-menu-shadow {\n  box-shadow: 0 4px  10px 0 rgba( 0, 0, 0, 0.3 );\n}\n\n.box-shadow {\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);\n}",
+		"spacing": {
+			"blockGap": "0px"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--inter)"
+		}
+	},
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header"
+		},
+		{
+			"area": "footer",
+			"name": "footer"
+		}
+	],
+	"version": 2,
+	"$schema": "https://schemas.wp.org/trunk/theme.json"
 }

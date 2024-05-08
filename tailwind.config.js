@@ -6,6 +6,7 @@ module.exports = {
     './src/blocks/**/*.{ts,tsx}',
   ],
   safelist: [
+    'hidden',
     'md:grid-cols-none',
     'md:grid-cols-1',
     'md:grid-cols-2',

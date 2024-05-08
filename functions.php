@@ -24,6 +24,13 @@ function creatordb_editor_enqueue()
 }
 add_action('enqueue_block_assets', 'creatordb_editor_enqueue');
 
+function creatordb_remove_core_patterns()
+{
+  remove_theme_support('core-block-patterns');
+}
+
+add_action('after_setup_theme', 'creatordb_remove_core_patterns');
+
 #[AllowDynamicProperties]
 class CDBBlock
 {
@@ -43,3 +50,4 @@ new CDBBlock('card');
 new CDBBlock('grid');
 new CDBBlock('accordion');
 new CDBBlock('button');
+new CDBBlock('toggle-section');
