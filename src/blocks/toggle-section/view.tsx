@@ -5,21 +5,21 @@ import DOMPurify from "dompurify"
 
 // Define an interface for the attributes your block uses
 interface FrontendProps {
-  sectionToggle: string,
+  sectionToggle: boolean,
   content: string,
 }
 
 document.querySelectorAll(".toggle-section-block").forEach(div => {
   const sectionToggle = JSON.parse(div.getAttribute('data-section-toggle') as string);
+  const sectionToggleBoolean = sectionToggle === "false" ? false : Boolean(sectionToggle)
   const content = JSON.parse(div.getAttribute('data-content') as string);
 
   // render(<CDBToggleSection sectionToggle={sectionToggle} content={content} />, div);
-  render(<CDBToggleSection sectionToggle={sectionToggle} content={content} />, div);
+  render(<CDBToggleSection sectionToggle={sectionToggleBoolean} content={content} />, div);
 });
 
 function CDBToggleSection(props: FrontendProps) {
-  const boolValue = props.sectionToggle === "false" ? false : Boolean(props.sectionToggle);
-  const [sectionToggle, setSectionToggle] = useState(boolValue)
+  const [sectionToggle, setSectionToggle] = useState(props.sectionToggle)
   const sanitizedHTMLContent = DOMPurify.sanitize(props.content)
 
   useEffect(() => {

@@ -8,7 +8,6 @@
   "description": "Accordion component powered by shadcn/ui.",
   "textdomain": "accordion",
   "editorScript": "file:./index.js",
-  "viewScript": "file:./view.js",
   "render": "file:./render.php",
   "attributes": {
     "accordionTriggers": {
