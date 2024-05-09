@@ -10,5 +10,18 @@
   "editorScript": "file:./index.js",
   "viewScript": "file:./view.js",
   "render": "file:./render.php",
-  "attributes": {}
+  "attributes": {
+    "accordionTriggers": {
+      "type": "array",
+      "default": [
+        ""
+      ]
+    },
+    "accordionContents": {
+      "type": "array",
+      "default": [
+        ""
+      ]
+    }
+  }
 }

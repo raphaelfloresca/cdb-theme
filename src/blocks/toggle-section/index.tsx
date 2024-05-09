@@ -8,10 +8,5 @@ registerBlockType(metadata.name, {
   icon: "smiley",
   edit: Edit,
   save: Save,
-  attributes: {
-    sectionToggle: {
-      type: "boolean",
-      default: false
-    }
-  }
+  attributes: JSON.parse(JSON.stringify(metadata.attributes))
 });

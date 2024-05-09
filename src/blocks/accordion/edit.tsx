@@ -10,8 +10,7 @@ import { Flex, FlexBlock, FlexItem } from "@wordpress/components"
 
 // Define an interface for the attributes your block uses
 interface BlockAttributes {
-  accordionTriggers: string[],
-  accordionContents: string[],
+  [key: string]: any;
 }
 
 // Define an interface for the component's props
@@ -24,16 +23,16 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
   const blockProps = useBlockProps()
 
   function deleteAccordionTrigger(indexToDelete: number) {
-    const newTriggers = attributes.accordionTriggers.filter(function(x, index) {
+    const newTriggers = attributes.accordionTriggers.filter(function(x: any, index: number) {
       return index != indexToDelete
     })
-    setAttributes({ accordionTriggers: newTriggers })
+    setAttributes({ ...attributes, accordionTriggers: newTriggers })
   }
 
   return (
     <div {...blockProps}>
       <Accordion type="single" collapsible className="w-full">
-        {attributes.accordionTriggers.map(function(trigger, index) {
+        {attributes.accordionTriggers.map(function(trigger: string, index: number) {
           attributes.accordionContents.concat([""])
 
           return (
@@ -45,9 +44,9 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
                       tagName="h3"
                       value={trigger} // Any existing content, either from the database or an attribute default
                       onChange={(newTrigger) => {
-                        const newTriggers = attributes.accordionTriggers.concat([])
+                        const newTriggers = [...attributes.accordionTriggers]
                         newTriggers[index] = newTrigger
-                        setAttributes({ accordionTriggers: newTriggers })
+                        setAttributes({ ...attributes, accordionTriggers: newTriggers })
                       }} // Store updated content as a block attribute
                       placeholder='Enter a trigger...' // Display this text before any content has been added by the user
                       onKeyUp={(event) => {
@@ -66,9 +65,9 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
                   tagName="p"
                   value={attributes.accordionContents[index]} // Any existing content, either from the database or an attribute default
                   onChange={(newContent) => {
-                    const newContents = attributes.accordionContents.concat([])
+                    const newContents = [...attributes.accordionContents]
                     newContents[index] = newContent
-                    setAttributes({ accordionContents: newContents })
+                    setAttributes({ ...attributes, accordionContents: newContents })
                   }} // Store updated content as a block attribute
                   placeholder='Enter content...' // Display this text before any content has been added by the user
                 />
@@ -78,7 +77,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
         })}
       </Accordion>
       <Button onClick={() => {
-        setAttributes({ accordionTriggers: attributes.accordionTriggers.concat([""]) })
+        setAttributes({ ...attributes, accordionTriggers: attributes.accordionTriggers.concat([""]) })
       }}>Add a new accordion item
       </Button>
     </div>

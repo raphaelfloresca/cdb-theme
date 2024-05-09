@@ -8,14 +8,5 @@ registerBlockType(metadata.name, {
   icon: "smiley",
   edit: Edit,
   save: Save,
-  attributes: {
-    accordionTriggers: {
-      type: "array",
-      default: [""]
-    },
-    accordionContents: {
-      type: "array",
-      default: [""]
-    }
-  }
+  attributes: JSON.parse(JSON.stringify(metadata.attributes))
 });

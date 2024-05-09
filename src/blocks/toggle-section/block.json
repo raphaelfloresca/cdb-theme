@@ -10,8 +10,10 @@
   "editorScript": "file:./index.js",
   "viewScript": "file:./view.js",
   "render": "file:./render.php",
-  "attributes": {},
-  "allowedBlocks": [
-    "core/group"
-  ]
+  "attributes": {
+    "sectionToggle": {
+      "type": "boolean",
+      "default": "false"
+    }
+  }
 }

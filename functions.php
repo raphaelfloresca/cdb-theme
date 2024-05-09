@@ -49,5 +49,4 @@ class CDBBlock
 new CDBBlock('card');
 new CDBBlock('grid');
 new CDBBlock('accordion');
-new CDBBlock('button');
 new CDBBlock('toggle-section');

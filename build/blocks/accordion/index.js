@@ -10201,26 +10201,26 @@ function Edit({ attributes, setAttributes }) {
         const newTriggers = attributes.accordionTriggers.filter(function (x, index) {
             return index != indexToDelete;
         });
-        setAttributes({ accordionTriggers: newTriggers });
+        setAttributes(Object.assign(Object.assign({}, attributes), { accordionTriggers: newTriggers }));
     }
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", Object.assign({}, blockProps, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.Accordion, { type: "single", collapsible: true, className: "w-full", children: attributes.accordionTriggers.map(function (trigger, index) {
                     attributes.accordionContents.concat([""]);
                     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionItem, { value: `item-${index + 1}`, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Flex, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexBlock, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionTrigger, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, { tagName: "h3", value: trigger, onChange: (newTrigger) => {
-                                                    const newTriggers = attributes.accordionTriggers.concat([]);
+                                                    const newTriggers = [...attributes.accordionTriggers];
                                                     newTriggers[index] = newTrigger;
-                                                    setAttributes({ accordionTriggers: newTriggers });
+                                                    setAttributes(Object.assign(Object.assign({}, attributes), { accordionTriggers: newTriggers }));
                                                 }, placeholder: 'Enter a trigger...' // Display this text before any content has been added by the user
                                                 , onKeyUp: (event) => {
                                                     event.stopPropagation();
                                                     event.preventDefault();
                                                 } }) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_button__WEBPACK_IMPORTED_MODULE_2__.Button, { onClick: () => { deleteAccordionTrigger(index); }, children: "Delete accordion item" }) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_accordion__WEBPACK_IMPORTED_MODULE_1__.AccordionContent, { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, { tagName: "p", value: attributes.accordionContents[index], onChange: (newContent) => {
-                                        const newContents = attributes.accordionContents.concat([]);
+                                        const newContents = [...attributes.accordionContents];
                                         newContents[index] = newContent;
-                                        setAttributes({ accordionContents: newContents });
+                                        setAttributes(Object.assign(Object.assign({}, attributes), { accordionContents: newContents }));
                                     }, placeholder: 'Enter content...' // Display this text before any content has been added by the user
                                  }) })] }));
                 }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_button__WEBPACK_IMPORTED_MODULE_2__.Button, { onClick: () => {
-                    setAttributes({ accordionTriggers: attributes.accordionTriggers.concat([""]) });
+                    setAttributes(Object.assign(Object.assign({}, attributes), { accordionTriggers: attributes.accordionTriggers.concat([""]) }));
                 }, children: "Add a new accordion item" })] })));
 }
 
@@ -14664,7 +14664,7 @@ const twMerge = /*#__PURE__*/createTailwindMerge(getDefaultConfig);
   \*****************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"creatordb/accordion","version":"0.1.0","title":"Accordion","category":"theme","description":"Accordion component powered by shadcn/ui.","textdomain":"accordion","editorScript":"file:./index.js","viewScript":"file:./view.js","render":"file:./render.php","attributes":{}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"creatordb/accordion","version":"0.1.0","title":"Accordion","category":"theme","description":"Accordion component powered by shadcn/ui.","textdomain":"accordion","editorScript":"file:./index.js","viewScript":"file:./view.js","render":"file:./render.php","attributes":{"accordionTriggers":{"type":"array","default":[""]},"accordionContents":{"type":"array","default":[""]}}}');
 
 /***/ })
 
@@ -14782,16 +14782,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__.name, Object.assign(Object.assign({}, _block_json__WEBPACK_IMPORTED_MODULE_3__), { icon: "smiley", edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"], save: _save__WEBPACK_IMPORTED_MODULE_2__["default"], attributes: {
-        accordionTriggers: {
-            type: "array",
-            default: [""]
-        },
-        accordionContents: {
-            type: "array",
-            default: [""]
-        }
-    } }));
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__.name, Object.assign(Object.assign({}, _block_json__WEBPACK_IMPORTED_MODULE_3__), { icon: "smiley", edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"], save: _save__WEBPACK_IMPORTED_MODULE_2__["default"], attributes: JSON.parse(JSON.stringify(_block_json__WEBPACK_IMPORTED_MODULE_3__.attributes)) }));
 
 })();
 

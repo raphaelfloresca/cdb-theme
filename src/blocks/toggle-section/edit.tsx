@@ -5,7 +5,7 @@ import { Switch } from "@/src/components/ui/switch"
 
 // Define an interface for the attributes your block uses
 interface BlockAttributes {
-  sectionToggle: boolean;
+  [key: string]: any;
 }
 
 // Define an interface for the component's props
@@ -15,7 +15,7 @@ interface EditProps {
   clientId: string;
 }
 
-const Edit = ({ attributes, setAttributes, clientId }: EditProps) => {
+export default function Edit({ attributes, setAttributes, clientId }: EditProps) {
   const blockProps = useBlockProps();
 
   // Specify the template for the inner blocks, correctly typing each entry
@@ -60,5 +60,3 @@ const Edit = ({ attributes, setAttributes, clientId }: EditProps) => {
     </div>
   )
 }
-
-export default Edit

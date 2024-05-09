@@ -5057,7 +5057,7 @@ var __webpack_exports__ = {};
   \********************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ Edit)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
@@ -5072,7 +5072,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Edit = ({ attributes, setAttributes, clientId }) => {
+function Edit({ attributes, setAttributes, clientId }) {
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
     // Specify the template for the inner blocks, correctly typing each entry
     const template = [
@@ -5107,8 +5107,7 @@ const Edit = ({ attributes, setAttributes, clientId }) => {
         });
     }, [attributes.sectionToggle]);
     return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", Object.assign({}, blockProps, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_switch__WEBPACK_IMPORTED_MODULE_4__.Switch, { id: "section-switch", checked: attributes.sectionToggle, onCheckedChange: () => setAttributes({ sectionToggle: !attributes.sectionToggle }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", Object.assign({}, innerBlocksProps))] })));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Edit);
+}
 
 })();
 
