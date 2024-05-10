@@ -1383,7 +1383,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Edit({ attributes, setAttributes, clientId }) {
+function Edit({ clientId }) {
+    const [sectionToggle, setSectionToggle] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
     // Specify the template for the inner blocks, correctly typing each entry
     const template = [
@@ -1397,14 +1398,13 @@ function Edit({ attributes, setAttributes, clientId }) {
     let innerBlocks = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.select)('core/block-editor').getBlocks(clientId);
     (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
         innerBlocks.forEach((block, index) => {
-            if (index === 0) {
+            if (index === 1) {
                 updateBlockAttributes(block.clientId, { className: "" });
             }
             else {
                 updateBlockAttributes(block.clientId, { className: "hidden" });
             }
             innerBlocks = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.select)('core/block-editor').getBlocks(clientId);
-            console.log(innerBlocks);
         });
     }, []);
     (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
@@ -1416,8 +1416,8 @@ function Edit({ attributes, setAttributes, clientId }) {
                 updateBlockAttributes(block.clientId, { className: "" });
             }
         });
-    }, [attributes.sectionToggle]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", Object.assign({}, blockProps, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_switch__WEBPACK_IMPORTED_MODULE_4__.Switch, { id: "section-switch", checked: attributes.sectionToggle, onCheckedChange: () => setAttributes({ sectionToggle: !attributes.sectionToggle }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", Object.assign({}, innerBlocksProps))] })));
+    }, [sectionToggle]);
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", Object.assign({}, blockProps, { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_switch__WEBPACK_IMPORTED_MODULE_4__.Switch, { id: "section-switch", checked: sectionToggle, onCheckedChange: () => setSectionToggle(!sectionToggle) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", Object.assign({}, innerBlocksProps))] })));
 }
 
 
@@ -5082,7 +5082,7 @@ const twMerge = /*#__PURE__*/createTailwindMerge(getDefaultConfig);
   \**********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"creatordb/toggle-section","version":"0.1.0","title":"Toggle Section","category":"theme","description":"Toggle Section component powered by shadcn/ui.","textdomain":"toggle-section","editorScript":"file:./index.js","viewScript":"file:./view.js","render":"file:./render.php","attributes":{"sectionToggle":{"type":"boolean","default":"false"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"creatordb/toggle-section","version":"0.1.0","title":"Toggle Section","category":"theme","description":"Toggle Section component powered by shadcn/ui.","textdomain":"toggle-section","editorScript":"file:./index.js","viewScript":"file:./view.js","render":"file:./render.php","attributes":{}}');
 
 /***/ })
 

@@ -14,11 +14,13 @@ interface FrontendProps {
 }
 
 document.querySelectorAll(".accordion-block").forEach(div => {
-  const accordionTriggers = JSON.parse(div.getAttribute('data-accordion-triggers') as string);
-  const accordionContents = JSON.parse(div.getAttribute('data-accordion-contents') as string);
+  const accordionTriggers = JSON.parse(div.getAttribute('data-accordion-triggers') as string)
+  const accordionContents = JSON.parse(div.getAttribute('data-accordion-contents') as string)
 
-  render(<CDBAccordion accordionTriggers={accordionTriggers} accordionContents={accordionContents} />, div);
-});
+  document.addEventListener('DOMContentLoaded', function() {
+    render(<CDBAccordion accordionTriggers={accordionTriggers} accordionContents={accordionContents} />, div)
+  })
+})
 
 function CDBAccordion(props: FrontendProps) {
   return (
@@ -42,5 +44,5 @@ function CDBAccordion(props: FrontendProps) {
         })}
       </Accordion>
     </div>
-  );
+  )
 }

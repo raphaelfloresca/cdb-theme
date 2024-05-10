@@ -1,21 +1,15 @@
 import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor'
 import { useDispatch, select } from '@wordpress/data'
-import { useEffect } from '@wordpress/element'
+import { useState, useEffect } from '@wordpress/element'
 import { Switch } from "@/src/components/ui/switch"
-
-// Define an interface for the attributes your block uses
-interface BlockAttributes {
-  [key: string]: any;
-}
 
 // Define an interface for the component's props
 interface EditProps {
-  attributes: BlockAttributes;
-  setAttributes: (attributes: Partial<BlockAttributes>) => void;
   clientId: string;
 }
 
-export default function Edit({ attributes, setAttributes, clientId }: EditProps) {
+export default function Edit({ clientId }: EditProps) {
+  const [sectionToggle, setSectionToggle] = useState(false)
   const blockProps = useBlockProps();
 
   // Specify the template for the inner blocks, correctly typing each entry
@@ -33,13 +27,12 @@ export default function Edit({ attributes, setAttributes, clientId }: EditProps)
 
   useEffect(() => {
     innerBlocks.forEach((block, index) => {
-      if (index === 0) {
+      if (index === 1) {
         updateBlockAttributes(block.clientId, { className: "" })
       } else {
         updateBlockAttributes(block.clientId, { className: "hidden" })
       }
       innerBlocks = select('core/block-editor').getBlocks(clientId)
-      console.log(innerBlocks)
     })
   }, [])
 
@@ -51,11 +44,11 @@ export default function Edit({ attributes, setAttributes, clientId }: EditProps)
         updateBlockAttributes(block.clientId, { className: "" })
       }
     })
-  }, [attributes.sectionToggle])
+  }, [sectionToggle])
 
   return (
     <div {...blockProps}>
-      <Switch id="section-switch" checked={attributes.sectionToggle} onCheckedChange={() => setAttributes({ sectionToggle: !attributes.sectionToggle })} />
+      <Switch id="section-switch" checked={sectionToggle} onCheckedChange={() => setSectionToggle(!sectionToggle)} />
       <div {...innerBlocksProps} />
     </div>
   )

@@ -14664,7 +14664,7 @@ const twMerge = /*#__PURE__*/createTailwindMerge(getDefaultConfig);
   \*****************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"creatordb/accordion","version":"0.1.0","title":"Accordion","category":"theme","description":"Accordion component powered by shadcn/ui.","textdomain":"accordion","editorScript":"file:./index.js","render":"file:./render.php","attributes":{"accordionTriggers":{"type":"array","default":[""]},"accordionContents":{"type":"array","default":[""]}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"creatordb/accordion","version":"0.1.0","title":"Accordion","category":"theme","description":"Accordion component powered by shadcn/ui.","textdomain":"accordion","editorScript":"file:./index.js","viewScript":"file:./view.js","render":"file:./render.php","attributes":{"accordionTriggers":{"type":"array","default":[""]},"accordionContents":{"type":"array","default":[""]}}}');
 
 /***/ })
 

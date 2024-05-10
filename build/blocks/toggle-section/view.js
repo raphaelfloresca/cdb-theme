@@ -6663,9 +6663,8 @@ __webpack_require__.r(__webpack_exports__);
 
 document.querySelectorAll(".toggle-section-block").forEach(div => {
     const sectionToggle = JSON.parse(div.getAttribute('data-section-toggle'));
-    const sectionToggleBoolean = sectionToggle === "false" ? false : Boolean(sectionToggle);
+    const sectionToggleBoolean = sectionToggle == null ? false : Boolean(sectionToggle);
     const content = JSON.parse(div.getAttribute('data-content'));
-    // render(<CDBToggleSection sectionToggle={sectionToggle} content={content} />, div);
     (0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(CDBToggleSection, { sectionToggle: sectionToggleBoolean, content: content }), div);
 });
 function CDBToggleSection(props) {
@@ -6689,7 +6688,7 @@ function CDBToggleSection(props) {
         });
         return doc.body.innerHTML;
     };
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_switch__WEBPACK_IMPORTED_MODULE_3__.Switch, { id: "section-switch", checked: sectionToggle, onCheckedChange: () => setSectionToggle(toggle => !toggle) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { id: "rendered-content" })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_src_components_ui_switch__WEBPACK_IMPORTED_MODULE_3__.Switch, { id: "section-switch", checked: sectionToggle, onCheckedChange: () => setSectionToggle(!sectionToggle) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { id: "rendered-content" })] }));
 }
 
 })();
